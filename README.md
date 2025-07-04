@@ -34,3 +34,38 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## developer log
+when deploying the tailwindcss, run to install:
+```
+npm install -D tailwindcss postcss autoprefixer
+```
+
+in database deployment, ref:
+```
+https://supabase.com/docs/guides/api/rest/generating-types
+```
+
+run:
+```
+npm install @supabase/auth-helpers-nextjs
+npm install @supabase/auth-helpers-react
+```
+
+when deploying the login module, e.g. Modal partion, we are gonna install the radix-ui by running: 
+```
+npm install @radix-ui/react-dialog
+```
+
+Authentication Model:
+```
+npm install zustand
+```
+
+Add some elements to the Authentication modal
+```
+npm install @supabase/auth-ui-react
+npm install @supabase/auth-ui-shared
+```
+
