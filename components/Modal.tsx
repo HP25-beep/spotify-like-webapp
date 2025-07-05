@@ -20,12 +20,12 @@ const Modal: React.FC<ModalProps> = ({
     <Dialog.Root
       open={isOpen}
       defaultOpen={isOpen}
-      onOpenChange={onChange}  
+      onOpenChange={onChange}
     >
       <Dialog.Portal>
         <Dialog.Overlay 
           className="
-            bg-nuetral-900/90
+            bg-neutral-900/90
             backdrop-blur-sm
             fixed
             inset-0
@@ -66,7 +66,7 @@ const Modal: React.FC<ModalProps> = ({
           </Dialog.Title>
           <Dialog.Description
             className="
-              nb-5
+              mb-5
               text-sm
               leading-normal
               text-center

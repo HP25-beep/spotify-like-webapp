@@ -69,3 +69,13 @@ npm install @supabase/auth-ui-react
 npm install @supabase/auth-ui-shared
 ```
 
+```
+npm install react-hot-toast
+```
+
+the upload modal relies on
+```
+npm install react-hook-form
+npm install uniqid
+npm install -D @types/uniqid
+```
