@@ -79,3 +79,22 @@ npm install react-hook-form
 npm install uniqid
 npm install -D @types/uniqid
 ```
+
+The search function relies on
+```
+npm install query-string
+```
+
+The volumn slider of player relies on
+```
+npm install @radix-ui/react-slider
+```
+To actually play a song, here we should should run the following line to install 
+a package
+```
+npm install use-sound
+```
+
+
+## problems
+数据库不支持歌名中文
