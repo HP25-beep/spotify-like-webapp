@@ -95,6 +95,10 @@ a package
 npm install use-sound
 ```
 
+add spinner
+```
+npm install react-spinners
+```
 
 ## problems
 数据库不支持歌名中文
