@@ -2,8 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { HiHome } from "react-icons/hi";
+// import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+import { BiCompass} from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 
 import { Song } from "@/types";
@@ -27,7 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const routes = useMemo(() => [
     {
-      icon: HiHome,
+      icon: BiCompass,
       label: 'Home', 
       active: pathname !== '/search', 
       href: '/',

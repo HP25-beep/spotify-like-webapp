@@ -27,7 +27,7 @@ const geistMono = Geist_Mono({
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Spotify Clone",
+  title: "Qingwa",
   description: "Listen to music!",
 };
 
