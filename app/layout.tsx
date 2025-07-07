@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const font = Figtree({subsets: ['latin']});
+// const font = Figtree({subsets: ['latin']});
 
 export const revalidate = 0;
 

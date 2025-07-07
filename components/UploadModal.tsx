@@ -119,6 +119,7 @@ const UploadModal = () => {
       }
 
     } catch (error) {
+      console.error("Error details: ", error)
       toast.error("Something went wrong");
     } finally {
       setIsLoading(false);
