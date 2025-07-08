@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/sidebar";
+import MainWindow from "@/components/MainWindow";
 import Player from "@/components/Player";
 
 import SupabaseProvider from "@/providers/SupabaseProvider";
@@ -48,11 +48,15 @@ export default async function RootLayout({
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider />
+
             <Navbar />
-              <Sidebar songs={userSongs}>
-                {children}
-              </Sidebar>
+
+            <MainWindow songs={ userSongs }>
+              {children}
+            </MainWindow>
+            
             <Player />
+
           </UserProvider>
         </SupabaseProvider>
       </body>

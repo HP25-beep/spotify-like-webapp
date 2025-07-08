@@ -22,7 +22,7 @@ const Navbar = () => {
   const AuthModal = useAuthModal();
   const { user } = useUser();
 
-    const routes = useMemo(() => 
+  const routes = useMemo(() => 
       {
         return {
           home: {
@@ -38,7 +38,7 @@ const Navbar = () => {
             href: '/explore', 
           }
         }
-      }, [pathname]);
+    }, [pathname]);
 
   return (
     <nav 
