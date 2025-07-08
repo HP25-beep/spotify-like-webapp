@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import { FaUserAlt } from 'react-icons/fa';
+
+import { BiSolidUser } from 'react-icons/bi';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@supabase/auth-helpers-react';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
@@ -27,6 +28,9 @@ const UserMenu = () => {
   };
 
   const handleMouseLeave = () => {
+    setIsMenuOpen(true);
+    setIsMenuOpen2(true);
+    
     setIsMenuOpen(false);
     const timer = setTimeout(() => {
       setIsMenuOpen2(false);
@@ -86,7 +90,7 @@ const UserMenu = () => {
             justify-center
           "
         >
-          <FaUserAlt size={16} />
+          <BiSolidUser size={16} />
         </div>
         <span className="text-sm font-medium hidden md:block">Username</span>
       </Button>

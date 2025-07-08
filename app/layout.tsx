@@ -28,8 +28,8 @@ const geistMono = Geist_Mono({
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Qingwa",
-  description: "Listen to music!",
+  title: "Waying",
+  description: "Rewind the ephemeral",
 };
 
 export default async function RootLayout({
@@ -49,9 +49,9 @@ export default async function RootLayout({
           <UserProvider>
             <ModalProvider />
             <Navbar />
-            <Sidebar songs={userSongs}>
-              {children}
-            </Sidebar>
+              <Sidebar songs={userSongs}>
+                {children}
+              </Sidebar>
             <Player />
           </UserProvider>
         </SupabaseProvider>
