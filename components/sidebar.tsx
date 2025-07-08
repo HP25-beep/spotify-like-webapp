@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-// import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { BiCompass} from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
@@ -29,7 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   const routes = useMemo(() => [
     {
       icon: BiCompass,
-      label: 'Home', 
+      label: 'Explore', 
       active: pathname !== '/search', 
       href: '/',
     }, 
@@ -43,10 +42,11 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <div className={twMerge(`
+      relative
       flex
-      h-full
+      h-[calc(100%-50px)]
     `, 
-      player.activeId && "h-[calc(100%-80px)]"
+      player.activeId && "h-[calc(100%-50px-75px)]"
     )}>
       <div
         className="

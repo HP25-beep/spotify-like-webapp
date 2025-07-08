@@ -14,7 +14,8 @@ const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputEl
         flex
         w-full
         rounded-md
-        bg-neutral-700
+        bg-neutral-800
+        hover:brightness-110
         border
         border-transparent
         px-3
@@ -24,7 +25,6 @@ const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputEl
         file:bg-transparent
         file:text-sm
         file:font-medium
-        placeholder:text-neutral-400
         disabled:cursor-not-allowed
         disabled:opacity-50
         focus:outline-none

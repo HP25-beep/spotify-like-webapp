@@ -1,9 +1,12 @@
 "use client";
 
 import qs from "query-string";
-import useDebounce from "@/hooks/useDebounce";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BiSearch } from "react-icons/bi";
+
+import useDebounce from "@/hooks/useDebounce";
+
 import Input from "./Input";
 
 const SearchInput = () => {
@@ -25,11 +28,39 @@ const SearchInput = () => {
   }, [debouncedValue, router]);
 
   return (
-    <Input 
-      placeholder="What do you want to listen to ?"
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-    />
+    <div className="relative">
+      <div
+        className="
+          flex 
+          items-center 
+          bg-white/5 
+          hover:bg-white/10 
+          transition-colors
+          rounded-full 
+          px-4 
+          py-2 
+          min-w-[380px]
+          max-h-[45px]
+        "
+      >
+        <BiSearch size={16} className="text-gray-400 mr-3" />
+        <Input 
+          placeholder="What do you want to listen to ?"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          className="
+            bg-transparent 
+            flex-1 
+            outline-none 
+            text-white 
+            placeholder-gray-400 
+            text-sm
+          "
+        />
+      </div>
+      
+    </div>
+    
   );
 }
 
