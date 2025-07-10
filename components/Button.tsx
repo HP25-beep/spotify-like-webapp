@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButt
         border-transparent
         disabled:cursor-not-allowed
         disabled:opacity-50
-        text-block
+        text-black
         font-bold
         hover:opacity-75
         transition

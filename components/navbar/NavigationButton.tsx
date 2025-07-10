@@ -1,3 +1,5 @@
+"use client"
+
 import { IconType } from "react-icons"
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";

@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 import { BiSolidUser } from 'react-icons/bi';
 import { useRouter } from 'next/navigation';
-import { useUser } from '@supabase/auth-helpers-react';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import toast from 'react-hot-toast';
 
 import usePlayer from '@/hooks/usePlayer';
+import { useUser } from '@/hooks/useUser';
 
 import Button from '../Button';
 
@@ -92,7 +92,9 @@ const UserMenu = () => {
         >
           <BiSolidUser size={16} />
         </div>
-        <span className="text-sm font-medium hidden md:block">Username</span>
+        <span className="text-sm font-medium hidden text-white/90 md:block">
+          {user.userDetails ? user.userDetails.full_name : "Username"}
+        </span>
       </Button>
       
       {(isMenuOpen || isMenuOpen2) && (
@@ -117,16 +119,6 @@ const UserMenu = () => {
             href="/account" 
             className="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700/90 hover:text-white transition-colors">
             Account
-          </a>
-          <a 
-            href="#" 
-            className="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700/90 hover:text-white transition-colors">
-            Profile
-          </a>
-          <a 
-            href="#" 
-            className="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700/90 hover:text-white transition-colors">
-            Settings
           </a>
           <hr className="my-1 border-neutral-600/50" />
           <a 
