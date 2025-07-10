@@ -4,11 +4,11 @@ import SongItem from "@/components/SongItem";
 import useOnPlay from "@/hooks/useOnPlay";
 import { Song } from "@/types";
 
-interface PageContentProps {
+interface ExploreContentProps {
   songs: Song[];
 }
 
-const PageContent: React.FC<PageContentProps> = ({
+const ExploreContent: React.FC<ExploreContentProps> = ({
   songs
 }) => {
   const onPlay = useOnPlay(songs);
@@ -46,4 +46,4 @@ const PageContent: React.FC<PageContentProps> = ({
   )
 }
 
-export default PageContent;
+export default ExploreContent;

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import { Song } from "@/types";
 import { useUser } from "@/hooks/useUser";
+import toast from "react-hot-toast";
 
 import MediaItem from "@/components/MediaItem";
 import LikeButton from "@/components/LikeButton";
@@ -25,6 +26,7 @@ const LikedContent: React.FC<LikedContentProps> = ({
   useEffect(() => {
     if (!isLoading && !user) {
       router.replace('/');
+      toast.error("You have not logged in.");
     }
   }, [isLoading, user, router]);
 

@@ -100,13 +100,12 @@ add spinner
 npm install react-spinners
 ```
 
-UI library:
+
 ```
-npm install lucide-react
+npm install server-only
 ```
 
 ## problems
-- 数据库不支持歌名中文
 
 ## Plans
 - 界面中文支持

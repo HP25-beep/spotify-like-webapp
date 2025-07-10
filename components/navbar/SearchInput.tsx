@@ -7,7 +7,7 @@ import { BiSearch } from "react-icons/bi";
 
 import useDebounce from "@/hooks/useDebounce";
 
-import Input from "./Input";
+import Input from "../Input";
 
 const SearchInput = () => {
   const router = useRouter();

@@ -16,7 +16,6 @@ const Modal: React.FC<ModalProps> = ({
   description,
   children
 }) => {
-  const layer = 20
   return (
     <Dialog.Root
       open={isOpen}
@@ -30,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({
             backdrop-blur-sm
             fixed
             inset-0
-            z-${layer}
+            z-100
           `}
         />
         <Dialog.Content
@@ -54,7 +53,7 @@ const Modal: React.FC<ModalProps> = ({
             bg-neutral-800
             p-[25px]
             focus:outline-none
-            z-${layer+10}
+            z-110
           `}
         > 
           <Dialog.Title

@@ -1,13 +1,9 @@
-import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
-
-import PageContent from "./components/PageContent";
 
 export const revalidate = 0;
 
 export default async function Home() {
-  const songs = await getSongs();
 
   return (
     <div className="
@@ -52,10 +48,46 @@ export default async function Home() {
       <div className="mt-2 mb-7 px-6">
         <div className="flex justify-between items-center">
           <h1 className="text-white text-2xl font-semibold">
-            Newest Songs
+            Some Words
           </h1>
         </div>
-        <PageContent songs={songs} />
+
+        <div
+          className="
+            p-2
+            bg-neutral-800/10
+            rounded-2xl
+            hover:bg-neutral-600/10
+            backdrop-blur-sm
+          "
+        >
+          <p className="p-4 text-white text-md">
+            大家好, 主页还没有想好放什么. 
+          </p>
+          <p className="p-4 text-white text-md">
+            这里是一个音频播放器 (青蛙牌), 所有 vup 的回放都可以放在这里, 大家可以把这里当作一个播放器 (青蛙牌). 
+          </p>
+          <p className="p-4 text-white text-md">
+            本站的目的是做一个播放器 (青蛙牌), feel free to use it and make this place your home.
+          </p>
+          <p className="p-4 text-white text-md">
+            这里多么简陋啊! 简陋得好似浑然天成的一块儿.
+          </p>
+          <p className="p-4 text-white text-md">
+            所有功能由 [ 我自己、果咩吖、Luu民、小孩梓、向心梨、小沐标、酥酥又、恬豆包、瞳星结、脆鲨、
+            乐几人、秧歌星、雏草姬、雪撬犬、敌敌尾、棺人痴（东洋）、音悦生、自麂人、泥好芽、鸟蛋、真纸棒、嘉心糖、未婚七、 ... ] 倾情维护中 ...
+          </p>
+          <div>
+            TODO List
+            <ul>
+              <li>文件系统</li>
+              <li>权限管理</li>
+              <li>批量上传</li>
+              <li>录播分类</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
     </div>
   );

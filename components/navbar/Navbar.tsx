@@ -11,10 +11,10 @@ import useAuthModal from '@/hooks/useAuthModal';
 import SearchInput from './SearchInput';
 import NavigationButton from './NavigationButton';
 import UserMenu from './UserMenu';
-import Button from './Button';
+import Button from '../Button';
 import Logo from './Logo';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
 
   const pathname = usePathname();
   const router = useRouter();
@@ -84,7 +84,7 @@ const Navbar = () => {
               transition
             "
           >
-            <RxCaretLeft className="text-white" size={24}/>
+            <RxCaretLeft className="text-neutral-400" size={24}/>
           </Button>
           <Button
           onClick={() => router.forward()}
@@ -98,7 +98,7 @@ const Navbar = () => {
               transition
             "
           >
-            <RxCaretRight className="text-white" size={24}/>
+            <RxCaretRight className="text-neutral-400" size={24}/>
           </Button>
         </div>
         

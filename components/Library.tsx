@@ -1,15 +1,16 @@
 "use client";
 
-import { AiOutlinePlus } from "react-icons/ai";
-import { TbPlaylist } from "react-icons/tb";
+import { BiMinus, BiPlus, BiSolidPlaylist } from "react-icons/bi";
+import { useState } from "react";
 
 import useAuthModal from "@/hooks/useAuthModal";
 import useUploadModal from "@/hooks/useUploadModal";
 import { useUser } from "@/hooks/useUser";
-import { Song } from "@/types";
 import useOnPlay from "@/hooks/useOnPlay";
 
-import MediaItem from "./MediaItem";
+import { Song } from "@/types";
+
+import FileNode from "./FileNode";
 
 interface LibraryProps {
   songs: Song[];
@@ -18,20 +19,20 @@ interface LibraryProps {
 const Library: React.FC<LibraryProps> = ({
   songs
 }) => {
-
   const authModal = useAuthModal();
   const uploadModal = useUploadModal();
   const { user } = useUser();
 
+  
   const onPlay = useOnPlay(songs);
-
+  
+  const [isEditing, setIsEditing] = useState(false);
+  
   const onClick = () => {
     if (!user) {
       return authModal.onOpen();
     }
-
-    // TODO: Check for subscription
-
+    
     return uploadModal.onOpen();
   };
 
@@ -52,7 +53,7 @@ const Library: React.FC<LibraryProps> = ({
             gap-x-2
           "
         >
-          <TbPlaylist className="text-neutral-400" size={26}/>
+          <BiSolidPlaylist className="text-neutral-400" size={26}/>
           <p 
             className="
               text-neutral-400
@@ -63,7 +64,18 @@ const Library: React.FC<LibraryProps> = ({
             Your Library
           </p>
         </div>
-        <AiOutlinePlus 
+        <div className="grid grid-cols-2 space-x-1">
+        <BiMinus
+          onClick={() => setIsEditing(!isEditing)}
+          size={20}
+          className="
+            text-neutral-400
+            cursor-pointer
+            hover:text-white
+            transition
+          "
+        />
+        <BiPlus 
           onClick={onClick}
           size={20}
           className="
@@ -73,6 +85,7 @@ const Library: React.FC<LibraryProps> = ({
             transition
           "
         />
+        </div>
       </div>
       <div className="
           flex
@@ -82,10 +95,11 @@ const Library: React.FC<LibraryProps> = ({
           px-3
       ">
         {songs.map((item) => (
-          <MediaItem
-            onClick={(id: string) => {onPlay(id)}}
+          <FileNode 
             key={item.id}
             data={item}
+            onEditing={isEditing}
+            onOpen={onPlay}
           />
         ))}
       </div>

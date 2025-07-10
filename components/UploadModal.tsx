@@ -62,7 +62,7 @@ const UploadModal = () => {
       } = await supabaseClient
         .storage
         .from('songs')
-        .upload(`song-${values.title}-${uniqueID}`, songFile, {
+        .upload(`song-${uniqueID}`, songFile, {
           cacheControl: '3600',
           upsert: false
         });
@@ -79,7 +79,7 @@ const UploadModal = () => {
       } = await supabaseClient
         .storage
         .from('images')
-        .upload(`image-${values.title}-${uniqueID}`, imageFile, {
+        .upload(`image-${uniqueID}`, imageFile, {
           cacheControl: '3600',
           upsert: false
         });
@@ -163,7 +163,7 @@ const UploadModal = () => {
         </div>
         <div>
           <div className="pb-1">
-            select a song file
+            select a image
           </div>
           <Input
             id="image"
@@ -173,7 +173,7 @@ const UploadModal = () => {
             {...register('image', { required: true })}
           />
         </div>
-        <Button disabled={isLoading} type="submit">
+        <Button disabled={isLoading} type="submit" className="text-black h-[40px]">
           Create 
         </Button>
       </form>

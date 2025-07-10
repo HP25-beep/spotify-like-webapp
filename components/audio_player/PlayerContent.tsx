@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
 import usePlayer from "@/hooks/usePlayer";
-import MediaItem from "./MediaItem";
-import LikeButton from "./LikeButton";
+import MediaItem from "../MediaItem";
+import LikeButton from "../LikeButton";
 import Slider from "./Slider";
 
 interface PlayerContentProps {

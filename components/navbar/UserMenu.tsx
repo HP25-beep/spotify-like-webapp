@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
 
 import usePlayer from '@/hooks/usePlayer';
 
-import Button from './Button';
+import Button from '../Button';
 
 const UserMenu = () => {
   const supabaseClient = useSupabaseClient();
@@ -114,7 +114,7 @@ const UserMenu = () => {
           "
         >
           <a 
-            href="#" 
+            href="/account" 
             className="block px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700/90 hover:text-white transition-colors">
             Account
           </a>
