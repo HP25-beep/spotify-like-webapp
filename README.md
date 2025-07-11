@@ -106,6 +106,9 @@ npm install server-only
 ```
 
 ## problems
+- 不支持userid, 不支持用户头像
+- 上传功能人机交互太差+图片带宽占用大
+- 数据库和type结构存在严重问题
 
 ## Plans
 - 界面中文支持
