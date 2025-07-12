@@ -84,7 +84,7 @@ const Account = () => {
 
     const {
       data: { publicUrl },
-    } = supabase.storage.from("user_avatar").getPublicUrl(filePath);
+    } = supabase.storage.from("useravatar").getPublicUrl(filePath);
 
     const { error: dbError } = await supabase
       .from("users")
@@ -103,8 +103,15 @@ const Account = () => {
 
   return (
     <AccountWrapper>
-      <div className="flex flex-col bg-neutral-900 rounded-lg h-full w-full overflow-y-auto items-center space-y-6 py-10">
+      <div className="flex flex-col {bg-neutral-900 rounded-lg h-full w-full overflow-y-auto items-center space-y-6 py-10">
         
+        <Box className="flex flex-col gap-y-2 py-4 px-6 w-[60%] bg-neutral-800/50 hover:bg-neutral-800/70 transition-colors text-md text-white/80 items-center">
+          <label className="w-full">Your ID:</label>
+          <div className="text-white/80">
+            {user?.id}
+          </div>
+        </Box>
+
         {/* Name Box */}
         <Box className="flex flex-col gap-y-2 py-4 px-6 w-[60%] bg-neutral-800/50 hover:bg-neutral-800/70 transition-colors text-md text-white/80 items-center">
           <label className="w-full">Your Name:</label>

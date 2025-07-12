@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 import { useDeleteSong } from "@/hooks/useDeleteSong";
 import { Song } from "@/types";
-import MediaItem from "./MediaItem";
+import MediaItem from "../MediaItem";
 
 interface FileNodeProps {
   data: Song;

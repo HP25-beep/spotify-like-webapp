@@ -1,7 +1,7 @@
 import { Song } from "@/types";
 
 import Box from "./Box";
-import Library from "./Library";
+import Library from "./library/Library";
 import MainWindowWrapper from "./MainWindowWrapper";
 
 interface MainWindowProps {

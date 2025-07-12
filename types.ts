@@ -61,3 +61,4 @@ export interface Rights {
     trial_end?: string;
     prices?: Price;
 };
+
